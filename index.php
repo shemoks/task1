@@ -1,14 +1,5 @@
 <?php
-use MathCaptcha\MathCaptcha;
-
 require_once "vendor/autoload.php";
-
-session_start();
-
-$mathCaptcha = new MathCaptcha();
-
-$mathCaptcha->generate();
-//$mathCaptcha->output();
 
 ?>
 <!DOCTYPE html>

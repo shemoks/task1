@@ -1,7 +1,4 @@
 <?php
-$firstNumber = $_POST['firstNumber'];
-$secondNumber = $_POST['secondNumber'];
-
 function simpleNumbers($firstNumber, $secondNumber)
 {
     $key = 0;
@@ -42,7 +39,16 @@ function viewTable($node)
     return $table;
 }
 
-echo "Простые числа </br>";
-$numbers = simpleNumbers($firstNumber, $secondNumber);
-echo viewTable($numbers);
-
+if (!empty($_POST['firstNumber'] && $_POST['secondNumber'])) {
+    $firstNumber = $_POST['firstNumber'];
+    $secondNumber = $_POST['secondNumber'];
+    if (is_numeric($firstNumber) && is_numeric($secondNumber) && $firstNumber <= $secondNumber) {
+        echo "Простые числа </br>";
+        $numbers = simpleNumbers($firstNumber, $secondNumber);
+        echo viewTable($numbers);
+    } else {
+        echo "Проверьте правильно ли указан диапазон чисел!";
+    }
+} else {
+    echo "Не все поля заполнены";
+}

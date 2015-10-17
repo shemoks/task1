@@ -1,7 +1,20 @@
+<?php
+use MathCaptcha\MathCaptcha;
+
+require_once "vendor/autoload.php";
+
+session_start();
+
+$mathCaptcha = new MathCaptcha();
+
+$mathCaptcha->generate();
+//$mathCaptcha->output();
+
+?>
 <!DOCTYPE html>
 <html >
 <link rel="stylesheet" type="text/css" href="style.css">
-<script src="jquery-2.1.4.min.js"></script>
+<script src="vendor/components/jquery/jquery.min.js"></script>
 <script src="main.js"></script>
 <head>
     <meta charset="UTF-8">

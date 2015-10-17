@@ -1,0 +1,8 @@
+{
+  "name": "shemoks/task1",
+  "require": {
+    "php": ">=5.5.0",
+    "magkopian/php-math-captcha": "1.0.*",
+    "components/jquery":">=2"
+  }
+}

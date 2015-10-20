@@ -12,10 +12,11 @@ require_once "vendor/autoload.php";
     <title>HomeWork 2</title>
 </head>
 <body>
+<h1>Введите диапазон для поиска простых чисел</h1>
 <form action="numbers.php" method="post" id="simpleNumbers">
-    <input type="text" name="firstNumber" />
+  <div class="input">от  <input type="text" name="firstNumber" />до
     <input type="text" name="secondNumber" />
-    <input type="submit" value="go">
+    <input type="submit" value="go"></div>
 </form>
 <div id="returnedData"></div>
 </body>
